@@ -49,7 +49,7 @@ function phone(){
     for(let i=0;i<15;i++){
         if(index<count){
             if(i==1) result+='('
-            if(i==4) result+=')'
+            else if(i==4) result+=')'
             else if(i==8||i==11) result+='-'
             else{result=result+a[index]; index+=1}
         }
