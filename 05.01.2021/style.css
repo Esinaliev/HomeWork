@@ -1,0 +1,23 @@
+.card{
+    width: 16rem;
+    height: 9rem;
+    background: rgb(0, 200, 0);
+    border: 3px rgb(0, 150, 0);
+    border-left: red;
+    border-style: dashed;
+    border-left-style: groove;
+    border-top-left-radius: 8pc;
+    border-bottom-right-radius: 1px;
+    padding: 10px;
+    margin: 10px;
+}
+.asd{
+    height: 9rem;
+    width: 16rem;
+    border: 2px solid;
+}
+.asd:hover{
+    font-display: initial;
+    background-color: darkmagenta;
+    font-style: italic;
+}

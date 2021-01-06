@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(34, 34, 34);">
+    <div id="app">
+        <div class="card" v-for="result in results">
+            <img :src="result.avatar" v-bind:alt="results">
+            <p class="text">{{ result.first_name }}</p>
+            <p class="text">{{ result.last_name }}</p>
+        </div>
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+</html>
