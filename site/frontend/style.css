@@ -1,17 +1,21 @@
 .card{
     text-align: center;
     margin: auto;
-    width: 19rem;
+    width: 20rem;
     height: 15rem;
     background-color: rgb(14, 0, 141);
     border: 2px solid rgb(0, 0, 0);
-    border-radius: 1rem;
+    border-top-left-radius: 6rem;
+    border-bottom-right-radius: 6rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
+    float:left;
 }
 .text{
     color: white;
     font-style: italic;
     font-size: larger;
-    
+}
+.photo{
+  background-color: white;  
 }

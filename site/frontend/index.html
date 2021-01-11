@@ -7,16 +7,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Fck u</title>
 </head>
 <body style="background-color: rgb(34, 34, 34);">
+    <h1>Fck u</h1>
+    <input type="number" name="" id="">
     <div id="app">
-        <div class="card" v-for="result in results">
-            <img :src="result.avatar" v-bind:alt="results">
-            <p class="text">{{ result.first_name }}</p>
-            <p class="text">{{ result.last_name }}</p>
+        <div class="card" v-for="(result,index) in results">
+            <img :src="result.avatar" v-bin:alt="results">
+            <p class="mytext">{{ result.first_name }}</p>
+            <p class="mytext">{{ result.last_name }}</p>
+            <input type="button" value="delete" v-on:click="deleteById(index)">
         </div>
-    </div>
+ </div>
     <script src="script.js">
     </script>
 </body>
