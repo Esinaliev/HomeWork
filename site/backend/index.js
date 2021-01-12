@@ -14,6 +14,7 @@ User.init(
     {
       first_name: DataTypes.STRING,
       last_name: DataTypes.STRING,
+      password: DataTypes.STRING,
       avatar: DataTypes.STRING
     },
     { sequelize, modelName: "Users" }
@@ -23,6 +24,7 @@ User.init(
 //id
 //first_name
 //last_name
+//password
 //avatar
 
 const app = express();
@@ -38,16 +40,6 @@ const port = 3000;
         res.send(JSON.stringify(all))
     });
 
-    app.post('/users', async (req,res) => {
-        if(true){
-        const user = await User.create({ 
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            avatar: req.body.avatar
-         });}
-        res.status(201).send('{"code":201}');
-    });
-
     app.get('/users/:id', async (req,res) => {
       if (req.params.id < 1) {
         return res.status(400).send({msg:"negative index"})
@@ -58,6 +50,28 @@ const port = 3000;
       }
       return res.status(200).send(user).header()
     });
+
+    app.post('/users', async (req,res) => {
+        if(true){
+        const user = await User.create({ 
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            password: req.body.password,
+            avatar: req.body.avatar
+         });}
+        res.status(201).send('{"code":201}');
+    });
+
+    app.patch('/users', async(req,res) =>{
+      if (req.params.id < 1) {
+        return res.status(400).send({msg:"negative index"})
+      }
+      user = await User.findByPk(req.params.id);
+      if(user === null){
+        return res.status(404).send({msg:"not found"})
+      }
+      req=res
+    })
 
     app.delete('/users/:id', async (req,res) => {
         if (req.params.id < 1) {

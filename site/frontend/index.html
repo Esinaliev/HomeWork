@@ -9,17 +9,19 @@
     <link rel="stylesheet" href="style.css">
     <title>Fck u</title>
 </head>
-<body style="background-color: rgb(34, 34, 34);">
-    <h1>Fck u</h1>
-    <input type="number" name="" id="">
+<body style="background-color: rgb(61, 0, 117);">
+    <h1 class="introduction">Fck u</h1>
+    <a href="Sing Up.html" >Sing up</a>
     <div id="app">
+    <p><input type="button" value="create" v-on:click="createNewId()"></p>
         <div class="card" v-for="(result,index) in results">
             <img :src="result.avatar" v-bin:alt="results">
-            <p class="mytext">{{ result.first_name }}</p>
-            <p class="mytext">{{ result.last_name }}</p>
-            <input type="button" value="delete" v-on:click="deleteById(index)">
+            <p class="text">{{ result.first_name }}</p>
+            <p class="text">{{ result.last_name }}</p>
+            <p><input type="button" value="edit" v-on:click="editById(index)" class="button"></p>
+            <p><input type="button" value="delete" v-on:click="deleteById(index)" class="button"></p>
         </div>
- </div>
+    </div>
     <script src="script.js">
     </script>
 </body>
