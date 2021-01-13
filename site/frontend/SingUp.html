@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Sing Up</title>
+</head>
+<body style="background-color: rgb(61, 0, 117);">
+    <div style="text-align: center;">
+        <div id="register" class="register">
+            <h1 class="introduction">Sing Up</h1>
+            <input type="text" v-model="newUser.first_name" placeholder=" "><br>
+            <input type="text" v-model="newUser.last_name"><br>
+            <input type="text" v-model="newUser.password"><br>
+            <input type="text" v-model="newUser.avatar"><br>
+            <!--<input id="register" type="button" value="clickclick" v-on:click="createNewUser">-->
+            <button v-on:click="createNewUser()">click</button>
+        </div>
+    </div>
+    <script src="registration.js"></script>
+</body>
+</html>

@@ -52,6 +52,7 @@ const port = 3000;
     });
 
     app.post('/users', async (req,res) => {
+        console.log(req.body);
         if(true){
         const user = await User.create({ 
             first_name: req.body.first_name,
@@ -59,7 +60,7 @@ const port = 3000;
             password: req.body.password,
             avatar: req.body.avatar
          });}
-        res.status(201).send('{"code":201}');
+        res.status(201).send(user);
     });
 
     app.patch('/users', async(req,res) =>{
@@ -70,7 +71,7 @@ const port = 3000;
       if(user === null){
         return res.status(404).send({msg:"not found"})
       }
-      req=res
+      res=req
     })
 
     app.delete('/users/:id', async (req,res) => {
