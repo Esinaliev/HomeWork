@@ -12,10 +12,10 @@ const vm=new Vue({
     methods:{
         async deleteById(index) {
             let id = this.results[index].id
-            //if(confirm('deleted ' + id)){
+            if(confirm('deleted ' + id)){
                 this.results.splice(index,1)
                 await axios.delete("http://localhost:3000/users/" + id)
-            //}
+            }
         },
         async editById(index) {
             alert('not work')
