@@ -1,19 +1,24 @@
 .card{
-    text-align: center;
-    margin: auto;
-    width: 15rem;
-    height: 20rem;
+  text-align: center;
+  margin: auto;
+  width: 13rem;
+  height: 18rem;
 
-    background-color: rgb(0, 199, 199);
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 2rem;
-    margin: 1rem;
-    float:left;
+  background: linear-gradient(to left bottom, rgb(0, 225, 255),rgb(0, 17, 255));
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 2rem;
+  margin: 0.5rem;
+  margin-right: 1rem;
+  float:left;
 }
 .text{
-    color: white;
-    font-style: italic;
-    font-size: larger;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
+  background: linear-gradient(to right, red, blue);
+  background-position: center;
+  background-size: auto;
+  font-style: italic;
+  font-size: larger;
 }
 .introduction{
   color: rgb(255, 167, 4);
@@ -25,19 +30,30 @@
   background-color: slateblue;
 }
 .register{
-  width: 15rem;
-  height: 20rem;
+  text-align: center;
+  background-color: cyan;
+  margin: auto;
+  margin-top: 1rem;
+  border-radius: 3rem;
+  width: 16rem;
+  height: 18rem;
+  background: linear-gradient(to bottom, cyan, blue);
 }
 .photo{
-  background-color: white;
-  max-block-size: 125px;
+  text-align: center;
+  min-height: 50px;
+  max-height: 100px;
+  max-width: 13rem;
 }
 .deleteButton{
+  background-color: slateblue;
   border-radius: 1rem;
+  background: linear-gradient(to left bottom,rgb(200, 255, 0), rgb(189, 0, 79));
 }.deleteButton:hover{
-  background-color: red;
+  background: linear-gradient(to left bottom, rgb(189, 0, 79),rgb(200, 255, 0));
 }
 .button{
+  color: tomato;
   border-radius: 1rem;
 }.button:hover{
   background-color: lime;
@@ -51,3 +67,21 @@
   font-display: initial;
   font-style: italic;
 }
+.imageBackgroung{
+  background-image: image-set("https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_Minecraft_image1280w.jpg");
+  list-style-image: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_Minecraft_image1280w.jpg";
+}
+.c {
+  border: 1px solid #000; /* Рамка */
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px 15px; /* Поля */
+  text-decoration: none; /* Убираем подчёркивание */
+  background-color: rgb(255, 255, 255); /* Цвет текста */
+  color: #000;
+}
+ .c:hover {
+  background: linear-gradient(to right, #a200ff, #0084ff);
+  color: rgb(0, 255, 0);
+  border-radius: 5px;
+ }

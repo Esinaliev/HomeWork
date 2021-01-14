@@ -7,21 +7,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <link rel="stylesheet" href="style.css">
-    <title>View users</title>
+    <title>ViewUsers</title>
 </head>
-<body style="background-color: rgb(61, 0, 117);">
+<body style="background: linear-gradient(to left, rgb(132, 0, 255), rgb(63, 0, 146));"><!--style="background-color: rgb(61, 0, 117);" -->
     <h1 class="introduction">All users</h1>
-    <a href="SingUp.html" class="asd">Sing up</a>
+    <a href="SingUp.html" class="c">Sing up</a>
     <div id="app">
         <div class="card" v-for="(result,index) in results">
-            <img :src="result.avatar" v-bin:alt="results" class="photo">
-            <p class="text">{{ result.first_name }}</p>
-            <p class="text">{{ result.last_name }}</p>
-            <!--<p><input type="button" value="edit" v-on:click="editById(index)" class="button"></p>-->
-            <p><input type="button" value="delete" v-on:click="deleteById(index)" class="deleteButton"></p>
             <p style="color: darkred;">{{ result.id }}</p>
+            <img :src="result.avatar" v-bin:alt="results" class="photo">
+            <p class="text">{{ result.first_name }} {{ result.last_name }}</p>
+            <!--<p><input type="button" value="edit" v-on:click="editById(index)" class="button"></p>-->
+            <button class="deleteButton" v-on:click="deleteById(index)">delete</button>
         </div>
     </div>
+    <!--<br>
+    <div class="app">
+        <input type="text" v-search="">
+        <button v-on:click="getUserById">click</button>
+        <div class="card">
+        </div>
+    </div>-->
     <script src="script.js"></script>
 </body>
 </html>

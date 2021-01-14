@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +9,18 @@
     <link rel="stylesheet" href="style.css">
     <title>Sing Up</title>
 </head>
-<body style="background-color: rgb(61, 0, 117);">
-    <div style="text-align: center;">
-        <div id="register" class="register">
+<body style="background: linear-gradient(to right, #6800a5, #8400db);">
+        <a href="index.html" class="c">View Users</a>
+        <div id="app" class="register">
             <h1 class="introduction">Sing Up</h1>
-            <input type="text" v-model="newUser.first_name" placeholder=" "><br>
-            <input type="text" v-model="newUser.last_name"><br>
-            <input type="text" v-model="newUser.password"><br>
-            <input type="text" v-model="newUser.avatar"><br>
+            <input type="text" v-model="newUser.first_name" placeholder="Имя"><br><br>
+            <input type="text" v-model="newUser.last_name" placeholder="Фамилию"><br><br>
+            <input type="text" v-model="newUser.password" placeholder="Пароль"><br><br>
+            <input type="text" v-model="newUser.avatar" placeholder="Ссылка на аватарку"><br><br>
             <!--<input id="register" type="button" value="clickclick" v-on:click="createNewUser">-->
-            <button v-on:click="createNewUser()">click</button>
+            <button v-on:click="createNewUser">Sing Up</button>
+            <a href="index.html" class="c" v-on:click="createNewUser">Sing Up)</a>
         </div>
-    </div>
-    <script src="registration.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
