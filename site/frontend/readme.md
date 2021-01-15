@@ -2,8 +2,11 @@ Frontend
 ==========================================================
 
 >SingUp.html
+
 >index.html
+
 >script.js
+
 >style.css
 
 SingUp.html
