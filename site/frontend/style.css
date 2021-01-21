@@ -1,15 +1,38 @@
-.card{
+.oneCard{
   text-align: center;
   margin: auto;
   width: 13rem;
-  height: 18rem;
+  height: 14rem;
 
-  background: linear-gradient(to left bottom, rgb(0, 225, 255),rgb(0, 17, 255));
+  background: linear-gradient(to left bottom, rgba(0, 225, 255, 0.75),rgba(0, 17, 255, 0.75));
   border: 2px solid rgb(0, 0, 0);
   border-radius: 2rem;
   margin: 0.5rem;
   margin-right: 1rem;
-  float:left;
+}.editCard{
+  text-align: center;
+  margin: auto;
+  width: 13rem;
+  height: 14rem;
+
+  background: linear-gradient(to left bottom, rgba(0, 225, 255, 0.75),rgba(0, 17, 255, 0.75));
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 2rem;
+  margin: 0.5rem;
+  margin-right: 1rem;
+}.editCard:hover{
+  height: auto;
+}
+.noneDiv{
+    display: none;
+}.noneDiv:hover{
+  display: block;
+}
+.changeHover{
+    display: inline-block;
+}
+.changeHover:hover + .noneDiv{
+    display: block;
 }
 .text{
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -19,15 +42,13 @@
   background-size: auto;
   font-style: italic;
   font-size: larger;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 .introduction{
   color: rgb(255, 167, 4);
   text-align: center;
-}
-.endSite{
-  position: -webkit-sticky;
-  height: 5rem;
-  background-color: slateblue;
+  font-style: oblique;
 }
 .register{
   text-align: center;
@@ -40,10 +61,13 @@
   background: linear-gradient(to bottom, cyan, blue);
 }
 .photo{
+  margin-top: 2%;
   text-align: center;
   min-height: 50px;
   max-height: 100px;
   max-width: 13rem;
+  border: 5px rgb(255, 255, 255);
+  border-style: ridge;
 }
 .deleteButton{
   background-color: slateblue;
@@ -51,12 +75,6 @@
   background: linear-gradient(to left bottom,rgb(200, 255, 0), rgb(189, 0, 79));
 }.deleteButton:hover{
   background: linear-gradient(to left bottom, rgb(189, 0, 79),rgb(200, 255, 0));
-}
-.button{
-  color: tomato;
-  border-radius: 1rem;
-}.button:hover{
-  background-color: lime;
 }
 .asd{
   height: 9rem;
@@ -67,21 +85,24 @@
   font-display: initial;
   font-style: italic;
 }
-.imageBackgroung{
-  background-image: image-set("https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_Minecraft_image1280w.jpg");
-  list-style-image: "https://cdn02.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_Minecraft_image1280w.jpg";
+ 
+.SignUp{
+  height: 17rem;
+  width: 15rem;
+  margin: auto;
+  text-align: center;
+  border:solid 1px rgb(219, 219, 219);
 }
-.c {
-  border: 1px solid #000; /* Рамка */
-  border-radius: 5px;
-  display: inline-block;
-  padding: 5px 15px; /* Поля */
-  text-decoration: none; /* Убираем подчёркивание */
-  background-color: rgb(255, 255, 255); /* Цвет текста */
-  color: #000;
+.mytext{
+  font-family: Garamond,Serif;
+  font-size: 120%;
 }
- .c:hover {
-  background: linear-gradient(to right, #a200ff, #0084ff);
-  color: rgb(0, 255, 0);
-  border-radius: 5px;
- }
+a{
+  color: rgb(53, 52, 52);
+  font-family: cursive;
+  font-size: large;
+}
+a:hover{
+  color: rgb(1,1,1);
+  font-style: italic;
+}

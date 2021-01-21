@@ -4,23 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Sing Up</title>
-</head>
-<body style="background: linear-gradient(to right, #6800a5, #8400db);">
-        <a href="index.html" class="c">View Users</a>
-        <div id="app" class="register">
-            <h1 class="introduction">Sing Up</h1>
-            <input type="text" v-model="newUser.first_name" placeholder="Имя"><br><br>
-            <input type="text" v-model="newUser.last_name" placeholder="Фамилию"><br><br>
-            <input type="text" v-model="newUser.password" placeholder="Пароль"><br><br>
-            <input type="text" v-model="newUser.avatar" placeholder="Ссылка на аватарку"><br><br>
-            <!--<input id="register" type="button" value="clickclick" v-on:click="createNewUser">-->
-            <button v-on:click="createNewUser">Sing Up</button>
-            <a href="index.html" class="c" v-on:click="createNewUser">Sing Up)</a>
-        </div>
-    <script src="script.js"></script>
+    <link rel="shortcut icon" href="https://img.icons8.com/wired/2x/shortcuts-quick-open.png" type="image/x-icon">
+  </head>
+<body style="background-image: url('https://i.pinimg.com/originals/97/89/fc/9789fc6932da75f87bca67df64b37f08.jpg'); background-position-x: center; ">
+  <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-tabs card-header-tabs">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="SingUp.html">Sign Up</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Edit.html">Edit users</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <br> 
+  <div id="app" style="text-align: center;">
+    <div class="register">
+      <h1 class="introduction">Sing Up</h1>
+      <input type="text" v-model="newUser.first_name" placeholder="Имя"><br><br>
+      <input type="text" v-model="newUser.last_name" placeholder="Фамилию"><br><br>
+      <input type="text" v-model="newUser.password" placeholder="Пароль"><br><br>
+      <input type="text" v-model="newUser.avatar" placeholder="Ссылка на аватарку"><br><br>
+      <!--<input id="register" type="button" value="clickclick" v-on:click="createNewUser">-->
+      <button v-on:click="createNewUser">Sing Up</button>
+    </div>
+    <div class="oneCard">
+      <img :src="newUser.avatar" v-bin:alt="results" class="photo">
+      <p class="text">{{ newUser.first_name }} {{ newUser.last_name }}</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
