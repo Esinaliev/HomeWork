@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>ViewUsers</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/wired/2x/shortcuts-quick-open.png" type="image/x-icon">
+</head>
+<body style="background-image: url('https://i.pinimg.com/originals/97/89/fc/9789fc6932da75f87bca67df64b37f08.jpg'); background-position-x: center;"><!--style="background-color: rgb(61, 0, 117);" -->
+    
+    <div class="card text-center">
+        <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="SingUp.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Edit.html">Edit users</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <h1 class="introduction"><strong>All users</strong></h1>
+    <br> 
+    <div id="app">
+        <div class="card-deck">
+            <div class="oneCard" v-for="(result,index) in results">
+                <div class="card-body">
+                    <img :src="result.avatar" v-bin:alt="results" class="photo">
+                    <div style="width: 12rem; height: 1rem; background-color: linear-gradient(to left bottom, rgba(9, 255, 0, 0.5),rgba(255, 196, 0, 0.5)); border-radius: 75%;">.</div>
+                    <p class="text">{{ result.first_name }} {{ result.last_name }}</p>
+                    <p style="color: darkred;"> ID: {{ result.id }}</p>
+                    <!--<a href="Edit.html" class="Button">edit</a><br>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="app">
+        <!--<div class="card" v-for="(result,index) in results">
+            <p style="color: darkred;">{{ result.id }}</p>
+            <img :src="result.avatar" v-bin:alt="results" class="photo">
+            <p class="text">{{ result.first_name }} {{ result.last_name }}</p>
+            <a href="Edit.html" class="Button">edit</a><br>
+            <button class="deleteButton" v-on:click="deleteById(index)">delete</button>
+        </div>-->
+    </div>
+            <!--<p><button class="button" v-on:click="editUser(index)">edit</button></p>-->
+    <!--<br>
+    <div id="app">
+        <input type="text" v-search="">
+        <button v-on:click="getUserById">click</button>
+        <br>
+        <div class="card" v-for="(result,index) in results">
+            <p style="color: darkred;">{{ result.id }}</p>
+            <img :src="result.avatar" v-bin:alt="results" class="photo">
+            <p class="text">{{ result.first_name }} {{ result.last_name }}</p>
+        </div>
+    </div>-->
+    <script src="script.js"></script>
+</body>
+</html>
